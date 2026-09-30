@@ -8,7 +8,7 @@ Projeto da DIO - Modelagem Dimensional com foco na análise dos professores.
 
 ### 📊 Diagrama
 
-![Diagrama Star Schema](./star-schema.png)
+<img width="780" height="479" alt="diagramaestrela" src="https://github.com/user-attachments/assets/034fcfba-e383-485f-9c77-a984092fbbb3" />
 
 ### 🧠 Estrutura do Modelo
 - **Tabela Fato Central:** `FATO_PROFESSOR`
