@@ -23,4 +23,44 @@ A dimensão DIM_TEMPO foi criada por mim com data_oferta, semestre e ano para an
 ### 🎯 Foco
 Esse modelo NÃO inclui dados de alunos. O foco é 100% na análise dos professores.
 
+### 💻 Código DBML - Como foi feito
+
+```dbml
+Table FATO_PROFESSOR {
+  idProfessor int [ref: > DIM_PROFESSOR.idProfessor]
+  idDepartamento int [ref: > DIM_DEPARTAMENTO.idDepartamento]
+  idDisciplina int [ref: > DIM_DISCIPLINA.idDisciplina]
+  idCurso int [ref: > DIM_CURSO.idCurso]
+  idTempo int [ref: > DIM_TEMPO.idTempo]
+  qtd_disciplinas int
+}
+
+Table DIM_PROFESSOR {
+  idProfessor int [pk]
+  nome varchar
+}
+
+Table DIM_DEPARTAMENTO {
+  idDepartamento int [pk]
+  nome varchar
+  campus varchar
+}
+
+Table DIM_DISCIPLINA {
+  idDisciplina int [pk]
+  nome varchar
+}
+
+Table DIM_CURSO {
+  idCurso int [pk]
+  nome varchar
+}
+
+Table DIM_TEMPO {
+  idTempo int [pk]
+  data_oferta date
+  semestre int
+  ano int
+}
+
 Feito por Melisa Machado 💙 para DIO
